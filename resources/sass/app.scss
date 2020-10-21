@@ -1,0 +1,57 @@
+// Required
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background-color: $light;
+}
+
+#app {
+  display: grid;
+}
+
+.navbar {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+  .navbar-nav {
+    height: 4rem;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+
+
+      border-style: solid;
+      border-width: 0 0 2px 0;
+      border-color: transparent;
+
+      text-decoration: none;
+      &:not(.active):hover {
+        border-color: $gray-500;
+      }
+      &.active {
+        border-color: $blue-400;
+      }
+
+      .nav-link {
+        color: rgba(0, 0, 0, 0.7) !important;
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: $grid-gutter-width / 2;
+  .col-feedback {
+    .invalid-feedback {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      font-weight: $font-weight-bold;
+      margin: 0;
+      background-color: $red-100;
+    }
+  }
+}

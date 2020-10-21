@@ -1,0 +1,70 @@
+/* FLOATING LABELS */
+.form-label-group {
+    position: relative;
+}
+
+.form-label-group > input,
+.form-label-group > textarea,
+.form-label-group > select,
+.form-label-group > label {
+    height: 3.125rem;
+    padding: .75rem;
+}
+
+.form-label-group > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    color: #777;
+    pointer-events: none;
+    cursor: text; /* Match the input under the label */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+}
+
+.form-label-group input::placeholder,
+.form-label-group select[data-chosen=''],
+.form-label-group textarea::placeholder{
+    color: transparent;
+}
+
+.form-label-group select[data-chosen=''] > option {
+    color: black;
+}
+
+.form-label-group input:not(:placeholder-shown),
+.form-label-group select:not([data-chosen='']),
+.form-label-group textarea:not(:placeholder-shown) {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label,
+.form-label-group select:not([data-chosen='']) ~ label,
+.form-label-group textarea:not(:placeholder-shown) ~ label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
+}
+
+.form-label-group .invalid-feedback,
+.form-label-group .valid-feedback {
+    display: block;
+}
+
+.form-label-group .invalid-feedback {
+    @apply text-red-600 bg-red-200;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1;
+
+    height: 24px;
+    margin-top: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
